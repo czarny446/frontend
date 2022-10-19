@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8"/>
+<script type="text/javascript">
+
+var srednia=0
+function f()
+{
+var numer1=document.getElementById("1").value;
+var numer2=document.getElementById("2").value;
+
+numer1=parseFloat(numer1);
+numer2=parseFloat(numer2);
+
+srednia=(numer1+numer2)/2
+
+document.getElementById("d").innerHTML=srednia
+}
+</script>
+</head>
+<body>
+<input type="text" id="1"/>
+<input type="text" id="2"/>
+<input type="button" value="Srednia" onclick="f()"/>
+<div id="d"></div>
+
+
+</body>
+</html>
