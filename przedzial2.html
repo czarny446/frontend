@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8"/>
+<script type="text/javascript">
+
+
+
+var s="";
+var d="";
+var suma=0;
+function przedzial()
+{
+window.x=document.getElementById("p1").value;
+window.y=document.getElementById("p2").value;
+
+x=parseFloat(x);
+y=parseFloat(y);
+
+if (x<y)
+{
+for(i=x;i<=y;i++)
+{
+ s=s+"<br>"+i;
+ suma=suma+i;
+}
+
+for(i=y;i>=x;i--)
+{
+ d=d+"<br>"+i;
+ 
+ 
+ }
+document.getElementById("d").innerHTML=s;
+document.getElementById("n").innerHTML=d;
+document.getElementById("s").innerHTML=suma;
+}
+
+if (x>y)
+{
+for(i=x;i>=y;i--)
+{
+ s=s+"<br>"+i;
+ suma=suma+i;
+}
+
+for(i=y;i<=x;i++)
+{
+ d=d+"<br>"+i;
+ 
+ 
+ }
+document.getElementById("d").innerHTML=s;
+document.getElementById("n").innerHTML=d;
+document.getElementById("s").innerHTML=suma;
+}
+}
+</script>
+</head>
+<body>
+<input type="text" id="p1"/>
+<input type="text" id="p2"/>
+<input type="button" value="przedzial" onclick="przedzial()"/>
+<div id="d"></div>
+<br>
+<div id="n"></div>
+<br>
+<div id="s"></div>
+</body>
+</html>
