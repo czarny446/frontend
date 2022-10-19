@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8"/>
+<script type="text/javascript">
+
+
+
+
+function sprawdz()
+{
+ window.x=document.getElementById("p1").value;
+ window.y=document.getElementById("p2").value;
+ x=parseInt(x);
+ y=parseInt(y);
+ 
+ window.wynik=(x/y);
+ window.reszta=x%y;
+ wynik=parseInt(wynik);
+ 
+ document.getElementById("s").innerHTML=wynik;
+ document.getElementById("d").innerHTML=reszta;
+ 
+}
+</script>
+</head>
+<body>
+<input type="text" id="p1"/>
+<input type="text" id="p2"/>
+<input type="button" value="sprawdz" onclick="sprawdz()"/>
+
+<div id="s"></div>
+<div id="d"></div>
+
+</body>
+</html>
