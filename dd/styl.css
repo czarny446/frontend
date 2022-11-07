@@ -1,0 +1,29 @@
+#baner
+{
+	background-color: #829EB9;
+	height: 50px;
+	font-family: Arial;
+	text-align: center;
+	
+	
+}
+#panel_lewy
+{
+	background-color: #B3C6D9;
+	height: 600px;
+	width: 25%;
+	
+}
+#panel_prawy
+{
+	background-color: #E0E9F1;
+	height: 600px;
+	width: 75%;
+	text-align: center;
+}
+#stopka
+{
+	background-color: #829EB9;
+    font-family: Arial;
+	text-align: right;
+}
