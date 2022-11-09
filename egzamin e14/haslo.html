@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8"/>
+	<title>Miernik jakości hasła</title>
+	<link href="styl.css" rel="stylesheet"/>
+	<script>
+		function sprawdz(){
+        var haslo = document.getElementById("pole1").value;
+		dlugosc = haslo.length;
+		
+		var wzorzec =/\d/;
+		if ((dlugosc>=7)&&(wzorzec.test(haslo)==true))
+		{document.getElementById("d1").innerHTML="dobre";
+		document.getElementById("d1").style.color = "green";}
+		else if (wzorzec.test(haslo)==false)
+		{document.getElementById("d1").innerHTML="Hasło musi zawierać cyfry";
+		document.getElementById("d1").style.color = "black";}
+		else if ((dlugosc<7&&dlugosc>4)&&(wzorzec.test(haslo)==true))
+		{document.getElementById("d1").innerHTML="średnie";
+		document.getElementById("d1").style.color = "burlywood";}
+		else if ((dlugosc<=4)&&(wzorzec.test(haslo)==true))
+		{document.getElementById("d1").innerHTML="słabe";
+		document.getElementById("d1").style.color = "crimson";}
+		else if(dlugosc==0)
+		{document.getElementById("d1").innerHTML="Brak hasla";
+		document.getElementById("d1").style.color = "red";}
+		
+}
+	</script>
+</head>
+<body>
+	<div id="baner">
+		<h1><a href="index.html">Sprawdź swoje hasło</a></h1>
+		
+	</div>
+	<div id="panel_lewy">
+		<h2>Wybierz</h2>
+		<ol>
+			<li><a href="haslo.html">Sprawdź hasło</a></li>
+			<li><a href="zasady.html">Zasady tworzenia hasła</a></li>
+		</ol>
+		
+	</div>
+	<div id="panel_prawy">
+		<br><br>
+		<span>Twoje hasło: </span>
+		<input type="password"  id="pole1" />
+		<input type="button" value="Sprawdź" onclick="sprawdz()" />
+		<div id="d1"></div>
+	</div>
+	<div id="stopka">
+		<h3>Miernik jakości hasła</h3>
+		<p>Stronę opracował</p>
+	</div>
+</body>
+</html>
